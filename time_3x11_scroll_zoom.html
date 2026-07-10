@@ -1,2 +1,4 @@
-const scan = GHOST_SCAN_REAL(ACSH);
-console.log(scan);
+loadRespo("ACSH").then(acsh => {
+    const scan = GHOST_SCAN_REAL(acsh);
+    console.log(scan);
+});
