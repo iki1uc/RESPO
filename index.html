@@ -1,15 +1,8 @@
-async function loadRespo(name){
-    const res = await fetch(`/RESPO/${name}.json`);
-    return await res.json();
-}
+<script src="/fin.e.js"></script>
 
-async function loadAllRespos(){
-    const names = ["AIR","boerse","markt3","ACSH"];
-    const respos = [];
-
-    for(const n of names){
-        respos.push(await loadRespo(n));
-    }
-
-    return respos;
-}
+<script>
+loadAllRespos().then(respos => {
+    const scan = respos.map(r => GHOST_SCAN_REAL(r));
+    console.log("SCAN:", scan);
+});
+</script>
