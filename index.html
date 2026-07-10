@@ -1,8 +1,8 @@
 <script src="/fin.e.js"></script>
 
 <script>
-loadAllRespos().then(respos => {
-    const scan = respos.map(r => GHOST_SCAN_REAL(r));
-    console.log("SCAN:", scan);
+loadRespo("ACSH").then(acsh => {
+    const scan = GHOST_SCAN_REAL(acsh);
+    console.log("ACSH SCAN:", scan);
 });
 </script>
