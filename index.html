@@ -1,7 +1,15 @@
-<script>
-const RESPOS = [
-    { ID: 48000, NAME: "AIR", STATUS: "1", RAUM:{X:48,Y:0,Z:0} },
-    { ID: 12001, NAME: "boerse", STATUS: "0", RAUM:{X:12,Y:0,Z:1} },
-    { ID: 13001, NAME: "ACSH", STATUS: "1", RAUM:{X:13,Y:0,Z:1} }
-];
-</script>
+async function loadRespo(name){
+    const res = await fetch(`/RESPO/${name}.json`);
+    return await res.json();
+}
+
+async function loadAllRespos(){
+    const names = ["AIR","boerse","markt3","ACSH"];
+    const respos = [];
+
+    for(const n of names){
+        respos.push(await loadRespo(n));
+    }
+
+    return respos;
+}
