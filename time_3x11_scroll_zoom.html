@@ -1,4 +1,4 @@
-loadRespo("ACSH").then(acsh => {
-    const scan = GHOST_SCAN_REAL(acsh);
+loadAllRespos().then(respos => {
+    const scan = respos.map(r => GHOST_SCAN_REAL(r));
     console.log(scan);
 });
