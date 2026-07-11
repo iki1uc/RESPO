@@ -1,1 +1,9 @@
 
+{
+  "quadrant": {
+    "orbit_triangle": ["Φ", "φ", "φ∞"],
+    "system_triangle": ["LAGE", "TEM", "RAUM"],
+    "square": ["Orbit", "Lage", "Zeit", "Raum"],
+    "valid": true
+  }
+}
