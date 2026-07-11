@@ -1,1 +1,11 @@
+{
+  "octa_core": {
+    "axes": [
+      "Φ", "φ", "φ∞", "φ²",
+      "LAGE", "TEM", "RAUM", "NC"
+    ],
+    "status": "valid",
+    "origin": "iki1uc RAW 213"
+  }
+}
 
