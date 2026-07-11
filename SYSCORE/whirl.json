@@ -1,1 +1,11 @@
+{
+  "whirl": {
+    "read": "spiral_in",
+    "save": "spiral_out",
+    "orbit_sync": true,
+    "lage_lock": true,
+    "tem_sequence": "3x11",
+    "raum_expand": true
+  }
+}
 
