@@ -1,8 +1,8 @@
-<script src="/fin.e.js"></script>
-
+<div id="timegrid">3×11 Zeit‑Raster aktiv</div>
 <script>
-loadRespo("ACSH").then(acsh => {
-    const scan = GHOST_SCAN_REAL(acsh);
-    console.log("ACSH SCAN:", scan);
+document.body.style.zoom = "1.0";
+window.addEventListener("scroll", () => {
+    document.getElementById("timegrid").innerText =
+        "Scroll = " + window.scrollY;
 });
 </script>
