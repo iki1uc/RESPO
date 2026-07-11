@@ -1,31 +1,9 @@
 {
-    "GRUENDER": "ridvan",
-
-    "ID": 13001,
-    "INDEX": "e",
-    "NAME": "ACSH",
-
-    "ORT": "/RESPO/",
-    "ENDUNG": "json",
-    "FUNKTION": "1",
-
-    "MASTER_ID": 1,
-    "SLAVE_ID": 13001,
-
-    "STATUS": "1",
-    "IST": "neu",
-    "SOLL": "aktiv",
-    "IST_IST": "ungleich",
-
-    "VERWALTUNG3": {
-        "SET": { "UP": true, "DOWN": false },
-        "IO": { "IN": true, "OUT": true },
-        "EXE": { "RUN": true, "PU": true, "PUBLIC": true }
-    },
-
-    "RAUM": { "X": 13, "Y": 0, "Z": 1 },
-    "MASSE": 1,
-    "WAHRHEIT": "REAL",
-
-    "ROOT": true
+  "ACSH": {
+    "ghost_scan": "real",
+    "octa_core2": true,
+    "quadrant": true,
+    "whirl": true,
+    "selfE": true
+  }
 }
