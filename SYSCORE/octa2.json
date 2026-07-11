@@ -1,1 +1,14 @@
+{
+  "octa_core2": {
+    "fusion": [
+      "Φ ↔ LAGE",
+      "φ ↔ TEM",
+      "φ∞ ↔ RAUM",
+      "φ² ↔ NC"
+    ],
+    "mirror": true,
+    "whirl_ready": true,
+    "status": "active"
+  }
+}
 
