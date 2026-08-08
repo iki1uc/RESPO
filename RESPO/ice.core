@@ -1,0 +1,26 @@
+<ice.core>
+
+    <prefetch.inner>
+        <mana>MANA.flow()</mana>
+        <axis>x0 y0 z0</axis>
+        <pulse>ICE.impulse++</pulse>
+    </prefetch.inner>
+
+    <tmpcore>
+        <take>USER.tmp</take>
+        <bind>ICE.link()</bind>
+        <pass>ICE.state</pass>
+    </tmpcore>
+
+    <station.index>
+        <switch>C → F → E → C</switch>
+        <cycle>ICE.rotate()</cycle>
+    </station.index>
+
+    <build>
+        <crystal>ICE.form.kristall()</crystal>
+        <flow>ICE.form.ue()</flow>
+        <fire>ICE.form.f()</fire>
+    </build>
+
+</ice.core>
