@@ -1,1 +1,29 @@
+<respoTMP core="EDy" layer="7" mode="inner">
+
+    <prefetch.inner>
+        <mana>MANA.flow()</mana>
+        <evo>EVO.HALL.shift()</evo>
+        <axis>x0 y0 z0</axis>
+        <lock>prefetch.keep</lock>
+    </prefetch.inner>
+
+    <tmp>
+        <take>USER.tmp</take>
+        <pass>USE.point</pass>
+        <bind>EDY.link()</bind>
+    </tmp>
+
+    <home.continium>
+        <root>HOME.ORT</root>
+        <space>CONTINIUM</space>
+        <coord>xU yU zU</coord>
+    </home.continium>
+
+    <universe>
+        <coord>UNI.x UNI.y UNI.z</coord>
+        <hall>EVO.HALL</hall>
+        <mana>MANA.level</mana>
+    </universe>
+
+</respoTMP>
 
