@@ -1,0 +1,35 @@
+<tmp.core mode="interpret">
+
+    <take>
+        <user>USER.tmp</user>
+        <use>USE.point</use>
+        <prefetch>prefetch.inner.lock</prefetch>
+    </take>
+
+    <score>
+        <user.score>USER.html</user.score>
+        <use.score>USE.html</use.score>
+        <vector>
+            U_s U_e OUR DU SIE ICH
+        </vector>
+    </score>
+
+    <quertieren>
+        <cross>U_s ↔ U_e</cross>
+        <relation>OUR ↔ DU ↔ SIE ↔ ICH</relation>
+        <signal>LINK.NET</signal>
+    </quertieren>
+
+    <interpret>
+        <net>LINK.NET.signal()</net>
+        <valid>vector.check()</valid>
+        <route>EDY.route()</route>
+    </interpret>
+
+    <pass>
+        <tmp.ready>TMP.core</tmp.ready>
+        <coord>xU yU zU</coord>
+        <universe>UNI.x UNI.y UNI.z</universe>
+    </pass>
+
+</tmp.core>
