@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>RESPO — EDy Evolution</title>
+<title>RESPO — Setup</title>
 
 <style>
     body {
@@ -19,8 +19,40 @@
 </head>
 <body>
 
-<h1>RESPO — EDy.respoTMP</h1>
-<p>MANA + EVO HALL aktiv</p>
+<h1>RESPO — Setup</h1>
+<p>Vorarbeit zur TMP‑Führung aktiv</p>
+
+<script>
+
+// USER / USE / MODULE / TMP — Setup Check
+
+const USER = { tmp: true };
+const USE  = { point: true };
+
+const MODULE = {
+    EDY: true,
+    MANA: true,
+    EVOHALL: true
+};
+
+function setupCheck() {
+
+    let okUser   = USER.tmp === true;
+    let okUse    = USE.point === true;
+    let okModule = MODULE.EDY && MODULE.MANA && MODULE.EVOHALL;
+
+    if (okUser && okUse && okModule) {
+        return "TMP.ready";
+    } else {
+        return "TMP.lock";
+    }
+}
+
+let status = setupCheck();
+
+document.body.innerHTML += "<p>Status: " + status + "</p>";
+
+</script>
 
 </body>
 </html>
