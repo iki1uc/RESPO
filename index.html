@@ -1,89 +1,26 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>RESPO · ORT‑LAGE</title>
+<title>RESPO — EDy Evolution</title>
 
 <style>
-body {
-    background:#000;
-    color:#0ff;
-    font-family:Consolas;
-    padding:20px;
-}
-h1 { color:#6cf; }
-h2 { color:#0f0; margin-top:25px; }
-pre {
-    background:#111;
-    padding:12px;
-    border:1px solid #333;
-    border-radius:6px;
-}
-
-/* RESPO-Bild / Symbol */
-.respoImage {
-    width:160px;
-    height:160px;
-    margin:20px auto;
-    border-radius:50%;
-    background: radial-gradient(circle, #001a33 0%, #003355 40%, #000 100%);
-    box-shadow: 0 0 40px #0ff, inset 0 0 40px #000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:60px;
-    color:#6cf;
-    text-shadow:0 0 20px #0ff;
-}
+    body {
+        margin: 0;
+        background: #000;
+        color: #66ccff;
+        font-family: monospace;
+        text-align: center;
+        padding-top: 12vh;
+        letter-spacing: 2px;
+    }
 </style>
 
-<script type="module">
-async function start() {
-
-    const RESPO_ORT = {
-        ROOT: "Creator / NC",
-        MODE: "Direkt-REAL",
-        READY: "82%",
-        LEVEL: "4er-Richtigkeit"
-    };
-
-    const LAGE = "LOAD:LAGE.room:OK";
-
-    const RESPO = {
-        NAME: "RESPO-Ort-LAGE",
-        STATUS: "VERBUNDEN",
-        TYPE: "ORT-LAGE",
-        ACTIVE: true
-    };
-
-    document.getElementById("ort").textContent =
-        JSON.stringify(RESPO_ORT, null, 2);
-
-    document.getElementById("lage").textContent =
-        JSON.stringify(LAGE, null, 2);
-
-    document.getElementById("respo").textContent =
-        JSON.stringify(RESPO, null, 2);
-}
-</script>
-
 </head>
+<body>
 
-<body onload="start()">
-
-<h1>RESPO · ORT‑LAGE</h1>
-
-<!-- DAS BILD / SYMBOL -->
-<div class="respoImage">⊙</div>
-
-<h2>ORT</h2>
-<pre id="ort">Lade…</pre>
-
-<h2>LAGE</h2>
-<pre id="lage">Lade…</pre>
-
-<h2>RESPO</h2>
-<pre id="respo">Lade…</pre>
+<h1>RESPO — EDy.respoTMP</h1>
+<p>MANA + EVO HALL aktiv</p>
 
 </body>
 </html>
