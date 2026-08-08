@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>RESPO — QI / IQQ</title>
+<title>RESPO · QI/IQQ · 756‑Axis Morph Scene</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #000;
-        color: #66ccff;
-        font-family: monospace;
-        text-align: center;
-        padding-top: 12vh;
-        letter-spacing: 2px;
-    }
+body {
+    background:#000;
+    color:#0ff;
+    font-family:Consolas;
+    margin:0;
+    padding:0;
+}
+canvas {
+    display:block;
+    margin:0 auto;
+    background:#000;
+}
+h1 {
+    text-align:center;
+    padding:20px;
+    color:#6cf;
+}
 </style>
 
+<script type="module">
+
+import PI from "./PI.js";              // PI.js → PI (real)
+import { OSF_VECTOR, ECO_ROOT_VECTOR } from "./OSF.vector";
+import { OSF_BEAM, OSF_PHI, OSF_STATION } from "./OUR.js";
+
+async function start() {
+
+    // QI / IQQ (Lichtpunkte)
+    const QI  = PI.phiScale(PI.pi);
+    const IQQ = PI.muShift(PI.vec(1,1));
+
+    // 756‑Achsen erzeugen
+    const AXES = [];
+    for (let i=0; i<756; i++) {
+        AXES.push({
+            x: Math.sin(i * 0.01) * OSF_VECTOR.DIR().dx,
+            y: Math.cos(i * 0.01) * OSF_VECTOR.DIR().dy,
+            z: Math.sin(i * 0.02) * OSF_VECTOR.DIR().dz,
+            eco: ECO_ROOT_VECTOR.ECO9(),
+            phi: OSF_PHI.VALUE
+        });
+    }
+
+    // Canvas
+    const canvas = document.getElementById("scene");
+    const ctx = canvas.getContext("2d");
+
+    let t = 0;
+
+    function animate() {
+        t += 0.01;
+
+        ctx.clearRect(0,0,900,600);
+
+        for (let i=0; i<AXES.length; i++) {
+
+            const a = AXES[i];
+
+            // Morphing Bewegung
+            const mx = 450 + Math.sin(t + a.x * 0.001) * (a.eco * 0.3);
+            const my = 300 + Math.cos(t + a.y * 0.001) * (a.phi * 0.3);
+
+            // QI/IQQ Lichtfarbe
+            ctx.fillStyle = `rgba(${QI*10}, ${IQQ.a*20}, 255, 0.7)`;
+
+            ctx.beginPath();
+            ctx.arc(mx, my, 2.2, 0, Math.PI*2);
+            ctx.fill();
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+start();
+
+</script>
+
 </head>
+
 <body>
 
-<h1>RESPO — QI / IQQ</h1>
-<p>Mathematische Lichtpunkte aktiv</p>
+<h1>RESPO · QI/IQQ · 756‑Axis Morph Scene</h1>
 
-<script type="module">
-import PIµ from "./PI.js";
-
-const QI   = PIµ.phiScale(PIµ.pi);
-const IQQ  = PIµ.muShift(PIµ.vec(1,1));
-
-document.body.innerHTML += "<p>QI: " + QI + "</p>";
-document.body.innerHTML += "<p>IQQ: (" + IQQ.a + ", " + IQQ.b + ", " + IQQ.c + ")</p>";
-</script>
+<canvas id="scene" width="900" height="600"></canvas>
 
 </body>
 </html>
