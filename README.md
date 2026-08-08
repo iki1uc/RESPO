@@ -1,26 +1,31 @@
-# RESPO-Ort-LAGE
+# RESPO — EDy.respoTMP (iki1uc)
 
-ORT = ROOT / Creator / NC
-ORT.MODE = Direkt-REAL
-ORT.STATE = aktiv
-ORT.LEVEL = 4er-Richtigkeit
-ORT.READY = 82%
+RESPO ist evolutioniert.  
+Die alte Struktur (DEFCON / ROOT / RESPO) ist entfernt.
 
-# VERBUNDEN MIT
-- RESPO-Name
-- RESPO-Station
-- RESPO-Beam-Point
-- RESPO-Code-Pipeline
-- LAGE-CODE-FINAL.nc
-- MASTER-SCANNER
-- system-check.js
-- ID.html
-- index.html
-- root-station-check.js
-- SEEu.md Generator
+RESPO ist jetzt ein EDy-Modul:
 
-# FUNKTION
-RESPO.Ort-LAGE definiert den realen Ort,
-an dem der RESPO-Interaktionator gebunden ist.
-Er ist Teil der LAGE-Struktur und bildet den
-Bindungspunkt für Station, Beam und Pipeline.
+- MANA — Energiekern
+- EVO HALL — Evolutionsraum
+- respoTMP — Antwortmodul
+
+---
+
+## GEO
+Achsen: x7 y7 z7  
+Raum: EVO.HALL  
+Signatur: R7
+
+## METRIE
+Last: 3×1  
+Antwort: EDY.reply()  
+Input: USER.tmp  
+Output: USE.point
+
+## MODULAR
+- MANA.flow()  
+- MANA.keep  
+- evo.move()  
+- EDY.reply()  
+
+RESPO ist jetzt EDy.respoTMP.
